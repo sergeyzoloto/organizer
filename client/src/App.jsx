@@ -7,17 +7,19 @@ import UserList from './pages/User/UserList/UserList';
 import Layout from './layout/Layout';
 import { UserContextProvider } from './context/UserContext';
 import LoginPage from './pages/User/LoginPage/LoginPage';
+import EmailValidation from './pages/EmailValidation/EmailValidation';
 
 function App() {
   return (
     <>
       <UserContextProvider>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path='/email-validation' element={<EmailValidation />} />
+          <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/user/list" element={<UserList />} />
-            <Route path="/user/create" element={<CreateUser />} />
-            <Route path="/user/login" element={<LoginPage />} />
+            <Route path='/user/list' element={<UserList />} />
+            <Route path='/user/create' element={<CreateUser />} />
+            <Route path='/user/login' element={<LoginPage />} />
           </Route>
         </Routes>
       </UserContextProvider>

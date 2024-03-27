@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import validateAllowedFields from '../util/validateAllowedFields.js';
 
 const userSchema = new mongoose.Schema({
+  userName: { type: String, required: true },
   password: { type: String, required: true, minLength: 7 },
   email: { type: String, required: true, unique: true },
 });
@@ -14,6 +15,7 @@ export const validateUser = (userObject, passwordRequired = true) => {
 
   const allowedKeys = [];
   if (passwordRequired) {
+    allowedKeys.push('userName');
     allowedKeys.push('email');
     allowedKeys.push('password');
   } else {

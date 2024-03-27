@@ -2,30 +2,35 @@ import createTestIdFilePath from '../../../utils/createTestIdFilePath';
 
 const TEST_ID = {
   container: `${createTestIdFilePath('pages', 'User', 'CreateUser')}-container`,
+  userNameInput: `${createTestIdFilePath(
+    'pages',
+    'User',
+    'CreateUser'
+  )}-userNameInput`,
   passwordInput: `${createTestIdFilePath(
     'pages',
     'User',
-    'CreateUser',
+    'CreateUser'
   )}-passwordInput`,
   emailInput: `${createTestIdFilePath(
     'pages',
     'User',
-    'CreateUser',
+    'CreateUser'
   )}-emailInput`,
   submitButton: `${createTestIdFilePath(
     'pages',
     'User',
-    'CreateUser',
+    'CreateUser'
   )}-submitButton`,
   loadingContainer: `${createTestIdFilePath(
     'pages',
     'User',
-    'CreateUser',
+    'CreateUser'
   )}-loadingContainer`,
   errorContainer: `${createTestIdFilePath(
     'pages',
     'User',
-    'CreateUser',
+    'CreateUser'
   )}-errorContainer`,
 };
 

@@ -8,6 +8,7 @@ import {
   updateUser,
   updatePassword,
   deleteUser,
+  checkEmail,
 } from '../controllers/user.js';
 
 const userRouter = express.Router();
@@ -20,5 +21,7 @@ userRouter.get('/profile', getProfile);
 userRouter.put('/update', updateUser);
 userRouter.put('/password/update', updatePassword);
 userRouter.delete('/delete', deleteUser);
+
+userRouter.get('/checkemail/:email', checkEmail);
 
 export default userRouter;
